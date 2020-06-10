@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -12,16 +13,19 @@ then
 fi
 echo "Starting at" `date`
 
+for oldname in *; do newname=`echo $oldname | sed -e 's/ //g'`; mv "$oldname" "$newname";
+done
 
 for FILE in */;
 do
     if [ -d "$FILE" ]; then
+
         cd $FILE
-        logger FILE_LIST
         rm -rf *."$extension"
         cd ..
     fi
 done
+
 
 echo -e "${GREEN}Done"
 

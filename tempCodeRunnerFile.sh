@@ -1,1 +1,0 @@
-read -p "File extension:" extension
