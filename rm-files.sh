@@ -13,9 +13,6 @@ then
 fi
 echo "Starting at" `date`
 
-for oldname in *; do newname=`echo $oldname | sed -e 's/ //g'`; mv "$oldname" "$newname";
-done
-
 for FILE in */;
 do
     if [ -d "$FILE" ]; then
