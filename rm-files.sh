@@ -8,7 +8,7 @@ read -p "File extension:" extension
 
 if [ -z "$extension" ];
 then
-    echo -e "${RED}No extension found. Please enter an extension"
+    echo "${RED}No extension found. Please enter an extension"
     exit $?
 fi
 echo "Starting at" `date`
@@ -27,6 +27,6 @@ do
 done
 
 
-echo -e "${GREEN}Done"
+echo "${GREEN}Done"
 
 exit $?
